@@ -1,0 +1,11 @@
+<a routerLink="/">← Retour à la liste</a>
+
+<div *ngIf="projet; else introuvable">
+    <h1>{{ projet.nom }}</h1>
+    <p>Statut : {{ projet.statut }}</p>
+    <p>ID : {{ projet.id }}</p>
+</div>
+
+<ng-template #introuvable>
+    <p>Projet introuvable.</p>
+</ng-template>

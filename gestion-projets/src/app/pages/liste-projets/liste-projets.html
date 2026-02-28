@@ -1,0 +1,9 @@
+<h1>Liste des projets</h1>
+<a routerLink="/ajouter">+ Ajouter un projet</a>
+
+<ul>
+    <li *ngFor="let projet of projets()">
+        {{ projet.nom }} — {{ projet.statut }}
+        <a [routerLink]="['/projet', projet.id]">Voir détail</a>
+    </li>
+</ul>

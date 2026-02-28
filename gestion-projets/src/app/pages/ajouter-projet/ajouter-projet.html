@@ -1,0 +1,16 @@
+<h1>Ajouter un projet</h1>
+<a routerLink="/">← Retour</a>
+
+<form (ngSubmit)="ajouterProjet()">
+    <label>
+        Nom du projet :
+        <input type="text" [(ngModel)]="nom" name="nom" required />
+    </label>
+
+    <label>
+        Statut :
+        <input type="text" [(ngModel)]="statut" name="statut" required />
+    </label>
+
+    <button type="submit">Ajouter</button>
+</form>
